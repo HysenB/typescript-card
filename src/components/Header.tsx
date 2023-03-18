@@ -1,3 +1,5 @@
+import Nav from "./Nav"
+
 type PropsType = {
     viewCart: boolean,
     setViewCart: React.Dispatch<React.SetStateAction<boolean>>,
@@ -14,6 +16,7 @@ const Header = ({ viewCart, setViewCart }: PropsType) => {
                     <p>Total Price:</p>
                 </div>
             </div>
+            <Nav viewCart={viewCart} setViewCart={setViewCart} />
         </header>
     )
     return content
