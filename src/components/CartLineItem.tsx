@@ -20,7 +20,7 @@ const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
     const optionValues: number[] = [...Array(highestQty).keys()].map(i => i + 1)
 
     const options: ReactElement[] = optionValues.map(val => {
-        return <option key={`opt${val}`} value={val}></option>
+        return <option key={`opt${val}`} value={val}>{val}</option>
     })
 
     const onChangeQty = (e: ChangeEvent<HTMLSelectElement>) => {
